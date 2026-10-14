@@ -4,7 +4,7 @@ export const en = {
 		siteName: 'Capzax',
 		title: 'Capzax: Every word, perfectly placed',
 		description:
-			'Capzax writes accurate captions for your videos, on your phone or with cloud AI, with beautiful styles and first-class Persian and Arabic support.',
+			'Capzax writes accurate captions for your videos, on your phone or with cloud AI, with beautiful styles and support for many languages, including right-to-left scripts.',
 	},
 	nav: { features: 'Features', how: 'How it works', help: 'Help', about: 'About', contact: 'Contact', cta: 'Get early access', menu: 'Menu' },
 	footer: {
@@ -26,13 +26,13 @@ export const en = {
 		ctaPrimary: 'Get early access',
 		ctaSecondary: 'See how it works',
 		demoLines: ['Make every', 'word', 'count'],
-		trust: ['Videos stay on your phone', 'Persian & Arabic, right to left', '100+ languages on-device', 'Free to start'],
+		trust: ['Videos stay on your phone', 'Many languages supported', 'Works offline for popular languages', 'Free to start'],
 		featuresTitle: 'Everything you need to caption well',
 		featuresSub: 'Fast to start, easy to fine-tune, and built for the way people really make short videos.',
 		features: [
 			{ icon: 'wand', title: 'Automatic captions', text: 'Pick a video and get timed captions word by word. Fix any word with a tap.' },
 			{ icon: 'lock', title: 'Private by design', text: 'On-phone mode works offline and never uploads anything. Your video never reaches our servers.' },
-			{ icon: 'languages', title: 'Persian & Arabic first', text: 'Real right-to-left layout, popular Persian and Arabic fonts and captions that read the way they should.' },
+			{ icon: 'languages', title: 'Many languages', text: 'Languages like English work well right on your phone, with no internet. Others, like Persian, give their best results with Cloud AI. We are always adding languages and improving quality.' },
 			{ icon: 'palette', title: 'Ready-made styles', text: 'A dozen looks, from clean to bold to playful. Pick one, then change any detail: font, colours, frame, highlight.' },
 			{ icon: 'type', title: 'Text anywhere', text: 'Add titles and notes, drag them where you want, choose when they appear and give them a simple animation.' },
 			{ icon: 'frame', title: 'Canvas & export', text: 'Original, square, 4:5, 9:16 or 16:9, with fit or fill. Export a finished video with the captions burned in.' },
@@ -47,13 +47,13 @@ export const en = {
 		langSub: 'Use whichever fits the moment. You can switch any time.',
 		device: {
 			title: 'On your phone',
-			text: 'Private and offline. No credits used. Supports more than 100 languages, with quality that varies by language, so we show you what to expect before you start.',
+			text: 'Private and offline. No credits used. Languages such as English work very well on your phone with no internet connection. Quality varies by language, so we show you what to expect before you start.',
 			tags: ['Offline', 'Private', 'Unlimited on paid plans'],
 		},
 		cloud: {
 			title: 'Cloud AI',
-			text: 'Higher accuracy for 30+ languages including Persian and Arabic. Only the audio of the video is sent to a speech provider to be transcribed.',
-			tags: ['Higher accuracy', '30+ languages', 'Needs internet'],
+			text: 'Better results for languages that are harder to do on a phone, such as Persian. Only the audio of the video is sent to a speech provider to be transcribed.',
+			tags: ['Higher accuracy', 'Many languages', 'Needs internet'],
 		},
 		privacyTitle: 'Your videos stay yours',
 		privacyPoints: [
@@ -91,11 +91,11 @@ export const en = {
 			{
 				title: 'Writing captions',
 				items: [
-					{ q: 'What is the difference between “On this phone” and “Cloud AI”?', a: 'On this phone works offline and is private: nothing leaves your device and no credits are used, but accuracy depends on the language. Cloud AI is more accurate and supports 30+ languages, but needs internet and sends the audio of your video to a speech provider to be transcribed.' },
-					{ q: 'Which languages are supported?', a: 'On your phone: more than 100 languages. Cloud AI: 30+ languages, including Persian, Arabic, English, Spanish, German and Swedish. In the language list we mark each on-phone language as Good, Fair or Limited so you know what to expect.' },
+					{ q: 'What is the difference between “On this phone” and “Cloud AI”?', a: 'On this phone works offline and is private: nothing leaves your device and no credits are used, but accuracy depends on the language, and popular languages like English work very well. Cloud AI is more accurate for many other languages, such as Persian, but needs internet and sends the audio of your video to a speech provider to be transcribed.' },
+					{ q: 'Which languages are supported?', a: 'Capzax supports many languages and we keep adding more. Popular languages such as English work very well on your phone, offline. Other languages, such as Persian, work best with Cloud AI. In the language list we mark each on-phone language as Good, Fair or Limited so you know what to expect. We are continually improving language support and caption quality.' },
 					{ q: 'The captions for my language are not accurate. What can I do?', a: 'Try Cloud AI, which is more accurate. You can also fix any word by tapping it on the timeline, or type the captions yourself with the manual option.' },
 					{ q: 'Can I edit the captions?', a: 'Yes. Tap any word to correct it, hide captions, regenerate them with a different method, or add lines by hand.' },
-					{ q: 'Does Capzax support Persian and Arabic?', a: 'Yes, as a priority: right-to-left layout, Persian and Arabic fonts and styles that work with both scripts. For the best Persian accuracy, use Cloud AI.' },
+					{ q: 'Does Capzax work with right-to-left languages?', a: 'Yes. Captions are laid out right to left and fonts for Persian and Arabic are included. For the best accuracy in these languages, use Cloud AI.' },
 				],
 			},
 			{
@@ -125,13 +125,13 @@ export const en = {
 		sub: 'We make video captions simple, beautiful and respectful of your privacy.',
 		story: [
 			'Captions are not an extra anymore. Most people watch video with the sound off, and a good caption can decide whether someone keeps watching.',
-			'But making them is tedious, and for right-to-left languages like Persian and Arabic most tools get the basics wrong: broken letters, wrong direction and few good fonts. Capzax started to fix that.',
+			'But making them is tedious, and many tools handle only a few languages well, especially right-to-left scripts such as Persian and Arabic, where letters break and the direction goes wrong. Capzax set out to do better for more languages.',
 			'We build Capzax around three ideas: it should be quick, it should look great and your videos should stay yours.',
 		],
 		valuesTitle: 'What we care about',
 		values: [
 			{ icon: 'zap', title: 'Fast', text: 'From video to finished captions in minutes, with an editor that stays out of your way.' },
-			{ icon: 'heart', title: 'Made for every script', text: 'Persian and Arabic are first-class, not an afterthought.' },
+			{ icon: 'heart', title: 'Made for many languages', text: 'More languages and better quality with every update, including right-to-left scripts.' },
 			{ icon: 'lock', title: 'Private', text: 'Your videos stay on your phone. We keep only what the account needs.' },
 		],
 		zaxvixTitle: 'A Zaxvix product',
