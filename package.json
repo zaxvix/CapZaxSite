@@ -1,0 +1,29 @@
+{
+  "name": "capzax-site",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Capzax website (capzax.com), a Zaxvix product",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@fontsource-variable/figtree": "^5.3.0",
+    "@fontsource-variable/unbounded": "^5.3.0",
+    "@fontsource-variable/vazirmatn": "^5.3.0",
+    "lucide-react": "^0.468.0",
+    "next": "^16.4.1",
+    "nodemailer": "^7.0.13",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "@types/nodemailer": "^6.4.24",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "typescript": "^5.9.3"
+  }
+}
