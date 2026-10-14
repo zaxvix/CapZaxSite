@@ -6,7 +6,7 @@ export const en = {
 		description:
 			'Capzax writes accurate captions for your videos, on your phone or with cloud AI, with beautiful styles and first-class Persian and Arabic support.',
 	},
-	nav: { features: 'Features', how: 'How it works', help: 'Help', about: 'About', contact: 'Contact', cta: 'Get early access', menu: 'Menu', language: 'فارسی' },
+	nav: { features: 'Features', how: 'How it works', help: 'Help', about: 'About', contact: 'Contact', cta: 'Get early access', menu: 'Menu' },
 	footer: {
 		tagline: 'Every word, perfectly placed.',
 		product: 'Product',

@@ -1,20 +1,13 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { notFound } from 'next/navigation';
 import { Icon } from '@/components/Icon';
-import { getDict } from '@/lib/dict';
-import { isLocale } from '@/lib/i18n';
+import { en } from '@/content/en';
 import { COMPANY } from '@/lib/site';
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
-	const { locale } = await params;
-	return isLocale(locale) ? { title: getDict(locale).about.title, alternates: { canonical: `/${locale}/about`, languages: { en: '/en/about', fa: '/fa/about' } } } : {};
-}
+export const metadata: Metadata = { title: en.about.title, alternates: { canonical: '/about' } };
 
-export default async function About({ params }: { params: Promise<{ locale: string }> }) {
-	const { locale } = await params;
-	if (!isLocale(locale)) notFound();
-	const t = getDict(locale).about;
+export default function About() {
+	const t = en.about;
 	return (
 		<>
 			<div className="page-head">
@@ -46,7 +39,7 @@ export default async function About({ params }: { params: Promise<{ locale: stri
 					</div>
 					<div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
 						<a className="btn btn-ghost" href={COMPANY.url} rel="noopener">{t.zaxvixLink}</a>
-						<Link className="btn btn-lime" href={`/${locale}/contact`}>{t.contactCta}</Link>
+						<Link className="btn btn-lime" href={'/contact'}>{t.contactCta}</Link>
 					</div>
 				</div>
 			</section>

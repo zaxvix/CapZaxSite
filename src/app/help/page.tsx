@@ -1,19 +1,12 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ChevronDown } from 'lucide-react';
-import { notFound } from 'next/navigation';
-import { getDict } from '@/lib/dict';
-import { isLocale } from '@/lib/i18n';
+import { en } from '@/content/en';
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
-	const { locale } = await params;
-	return isLocale(locale) ? { title: getDict(locale).help.title, alternates: { canonical: `/${locale}/help`, languages: { en: '/en/help', fa: '/fa/help' } } } : {};
-}
+export const metadata: Metadata = { title: en.help.title, alternates: { canonical: '/help' } };
 
-export default async function Help({ params }: { params: Promise<{ locale: string }> }) {
-	const { locale } = await params;
-	if (!isLocale(locale)) notFound();
-	const t = getDict(locale).help;
+export default function Help() {
+	const t = en.help;
 	const ld = {
 		'@context': 'https://schema.org',
 		'@type': 'FAQPage',
@@ -43,7 +36,7 @@ export default async function Help({ params }: { params: Promise<{ locale: strin
 				<div className="card" style={{ textAlign: 'center', padding: 40 }}>
 					<h3 style={{ marginTop: 0 }}>{t.stillTitle}</h3>
 					<p style={{ margin: '10px 0 22px' }}>{t.stillText}</p>
-					<Link className="btn btn-lime" href={`/${locale}/contact`}>{t.stillButton}</Link>
+					<Link className="btn btn-lime" href={'/contact'}>{t.stillButton}</Link>
 				</div>
 				</div>
 			</section>

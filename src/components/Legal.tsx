@@ -4,8 +4,8 @@ import { CONTACT_EMAIL, UPDATED } from '@/lib/site';
 
 type Doc = { title: string; intro: string; sections: { h: string; p: string[] }[]; summaryTitle?: string; summary?: string[] };
 
-export function Legal({ doc, t, locale }: { doc: Doc; t: Dict['legal']; locale: string }) {
-	const date = new Intl.DateTimeFormat(locale === 'fa' ? 'fa-IR' : 'en-GB', { dateStyle: 'long', timeZone: 'UTC' }).format(new Date(UPDATED));
+export function Legal({ doc, t }: { doc: Doc; t: Dict['legal'] }) {
+	const date = new Intl.DateTimeFormat('en-GB', { dateStyle: 'long', timeZone: 'UTC' }).format(new Date(UPDATED));
 	return (
 		<>
 			<div className="page-head">

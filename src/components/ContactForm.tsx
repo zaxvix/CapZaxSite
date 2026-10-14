@@ -5,7 +5,7 @@ import type { Dict } from '@/content/en';
 
 type State = 'idle' | 'sending' | 'ok' | 'required' | 'many' | 'error';
 
-export function ContactForm({ locale, t, earlySubject }: { locale: string; t: Dict['contact']['form']; earlySubject: string }) {
+export function ContactForm({ t, earlySubject }: { t: Dict['contact']['form']; earlySubject: string }) {
 	const [state, setState] = useState<State>('idle');
 	const [subject, setSubject] = useState('');
 
@@ -27,7 +27,6 @@ export function ContactForm({ locale, t, earlySubject }: { locale: string; t: Di
 					subject: data.get('subject'),
 					message: data.get('message'),
 					website: data.get('website'),
-					locale,
 				}),
 			});
 			if (res.ok) {

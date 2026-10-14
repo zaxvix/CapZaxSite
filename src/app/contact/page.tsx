@@ -1,19 +1,12 @@
 import type { Metadata } from 'next';
-import { notFound } from 'next/navigation';
 import { ContactForm } from '@/components/ContactForm';
-import { getDict } from '@/lib/dict';
-import { isLocale } from '@/lib/i18n';
+import { en } from '@/content/en';
 import { COMPANY, CONTACT_EMAIL } from '@/lib/site';
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
-	const { locale } = await params;
-	return isLocale(locale) ? { title: getDict(locale).contact.title, alternates: { canonical: `/${locale}/contact`, languages: { en: '/en/contact', fa: '/fa/contact' } } } : {};
-}
+export const metadata: Metadata = { title: en.contact.title, alternates: { canonical: '/contact' } };
 
-export default async function Contact({ params }: { params: Promise<{ locale: string }> }) {
-	const { locale } = await params;
-	if (!isLocale(locale)) notFound();
-	const t = getDict(locale).contact;
+export default function Contact() {
+	const t = en.contact;
 	return (
 		<>
 			<div className="page-head">
@@ -24,7 +17,7 @@ export default async function Contact({ params }: { params: Promise<{ locale: st
 			</div>
 			<section className="wrap" style={{ paddingBottom: 40 }}>
 				<div className="contact-grid">
-					<ContactForm locale={locale} t={t.form} earlySubject={t.earlyAccessSubject} />
+					<ContactForm t={t.form} earlySubject={t.earlyAccessSubject} />
 					<aside className="side">
 						<h3>{t.sideTitle}</h3>
 						<dl style={{ margin: 0, display: 'grid', gap: 16 }}>

@@ -1,16 +1,12 @@
 import Link from 'next/link';
 import { Cloud, Check, Smartphone } from 'lucide-react';
-import { notFound } from 'next/navigation';
 import { Icon } from '@/components/Icon';
 import { PhoneMock } from '@/components/PhoneMock';
-import { getDict } from '@/lib/dict';
-import { isLocale } from '@/lib/i18n';
+import { en } from '@/content/en';
 
-export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
-	const { locale } = await params;
-	if (!isLocale(locale)) notFound();
-	const t = getDict(locale).home;
-	const b = `/${locale}`;
+export default function Home() {
+	const t = en.home;
+	const b = '';
 
 	return (
 		<>

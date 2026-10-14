@@ -13,9 +13,9 @@ export function Mark({ size = 40 }: { size?: number }) {
 	);
 }
 
-export function Brand({ locale }: { locale: string }) {
+export function Brand() {
 	return (
-		<Link href={`/${locale}`} className="brand" aria-label="Capzax">
+		<Link href="/" className="brand" aria-label="Capzax">
 			<Mark size={38} />
 			<span className="brand-name">capzax</span>
 		</Link>

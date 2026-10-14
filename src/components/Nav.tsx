@@ -6,15 +6,13 @@ import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import type { Dict } from '@/content/en';
 
-export function Nav({ locale, t }: { locale: string; t: Dict['nav'] }) {
-	const pathname = usePathname() || `/${locale}`;
+export function Nav({ t }: { t: Dict['nav'] }) {
+	const pathname = usePathname() || '/';
 	const [open, setOpen] = useState(false);
-	const base = `/${locale}`;
-	const other = locale === 'fa' ? 'en' : 'fa';
-	const rest = pathname.replace(/^\/(en|fa)/, '');
+	const base = '';
 	const items = [
-		{ href: `${base}#features`, label: t.features },
-		{ href: `${base}#how`, label: t.how },
+		{ href: '/#features', label: t.features },
+		{ href: '/#how', label: t.how },
 		{ href: `${base}/help`, label: t.help },
 		{ href: `${base}/about`, label: t.about },
 		{ href: `${base}/contact`, label: t.contact },
@@ -28,7 +26,6 @@ export function Nav({ locale, t }: { locale: string; t: Dict['nav'] }) {
 				{items.map((i) => (
 					<Link key={i.href} className="link" href={i.href} aria-current={current(i.href)}>{i.label}</Link>
 				))}
-				<Link className="lang" href={`/${other}${rest}`} hrefLang={other} lang={other}>{t.language}</Link>
 				<Link className="btn btn-lime btn-sm" href={cta}>{t.cta}</Link>
 			</nav>
 			<div className="menu">
@@ -46,7 +43,6 @@ export function Nav({ locale, t }: { locale: string; t: Dict['nav'] }) {
 						{items.map((i) => (
 							<Link key={i.href} href={i.href}>{i.label}</Link>
 						))}
-						<Link href={`/${other}${rest}`} hrefLang={other} lang={other}>{t.language}</Link>
 						<Link className="btn btn-lime btn-sm" href={cta} style={{ marginTop: 6 }}>{t.cta}</Link>
 					</div>
 				)}

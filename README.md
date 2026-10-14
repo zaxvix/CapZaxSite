@@ -1,8 +1,8 @@
 # Capzax website
 
-Marketing site for the Capzax app (capzax.com), a Zaxvix product. Next.js 16 (App Router, standalone output), English + Persian (RTL), no analytics or cookies.
+Marketing site for the Capzax app (capzax.com), a Zaxvix product. Next.js 16 (App Router, standalone output), English only, no analytics or cookies.
 
-Pages: Home, Help (FAQ), About, Contact (form → email), Terms, Privacy. Text lives in `src/content/en.ts` and `src/content/fa.ts` (same shape; edit both).
+Pages: Home, Help (FAQ), About, Contact (form → email), Terms, Privacy. Text lives in `src/content/en.ts`.
 
 ## Develop
 ```bash

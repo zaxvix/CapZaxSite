@@ -3,21 +3,21 @@ import type { Dict } from '@/content/en';
 import { COMPANY, CONTACT_EMAIL } from '@/lib/site';
 import { Brand } from './Brand';
 
-export function Footer({ locale, t, nav }: { locale: string; t: Dict['footer']; nav: Dict['nav'] }) {
-	const b = `/${locale}`;
+export function Footer({ t, nav }: { t: Dict['footer']; nav: Dict['nav'] }) {
+	const b = '';
 	return (
 		<footer className="footer">
 			<div className="wrap">
 				<div className="foot-grid">
 					<div>
-						<Brand locale={locale} />
+						<Brand />
 						<p className="muted" style={{ marginTop: 14, maxWidth: 300 }}>{t.tagline}</p>
 					</div>
 					<div>
 						<h4>{t.product}</h4>
 						<ul>
-							<li><Link href={`${b}#features`}>{nav.features}</Link></li>
-							<li><Link href={`${b}#how`}>{nav.how}</Link></li>
+							<li><Link href={`/#features`}>{nav.features}</Link></li>
+							<li><Link href={`/#how`}>{nav.how}</Link></li>
 							<li><Link href={`${b}/help`}>{nav.help}</Link></li>
 						</ul>
 					</div>

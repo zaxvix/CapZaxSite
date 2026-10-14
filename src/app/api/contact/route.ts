@@ -35,7 +35,6 @@ export async function POST(request: NextRequest) {
 		const email = oneLine(clean(body.email, 200));
 		const subject = oneLine(clean(body.subject, 150));
 		const message = clean(body.message, 5000);
-		const locale = body.locale === 'fa' ? 'fa' : 'en';
 
 		if (!subject || !message || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
 			return NextResponse.json({ error: 'Please complete all fields.' }, { status: 400 });
@@ -59,12 +58,12 @@ export async function POST(request: NextRequest) {
 			to,
 			replyTo: email,
 			subject: `[Capzax] ${subject}`,
-			text: `From: ${email}\nLanguage: ${locale}\n\n${message}`,
+			text: `From: ${email}\n\n${message}`,
 			html: `<div style="font-family:Arial,sans-serif;line-height:1.6;color:#101827">
 <h2>New Capzax website message</h2>
 <p><strong>From:</strong> ${escapeHtml(email)}</p>
 <p><strong>Subject:</strong> ${escapeHtml(subject)}</p>
-<p><strong>Language:</strong> ${locale}</p><hr />
+<hr />
 <p style="white-space:pre-wrap">${escapeHtml(message)}</p></div>`,
 		});
 		return NextResponse.json({ ok: true });
