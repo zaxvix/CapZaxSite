@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import type { Dict } from '@/content/en';
 
 type State = 'idle' | 'sending' | 'ok' | 'required' | 'many' | 'error';
@@ -8,6 +8,8 @@ type State = 'idle' | 'sending' | 'ok' | 'required' | 'many' | 'error';
 export function ContactForm({ t, earlySubject }: { t: Dict['contact']['form']; earlySubject: string }) {
 	const [state, setState] = useState<State>('idle');
 	const [subject, setSubject] = useState('');
+	const openedAt = useRef(0);
+	useEffect(() => { openedAt.current = Date.now(); }, []);
 
 	useEffect(() => {
 		if (new URLSearchParams(window.location.search).get('s') === 'early') setSubject(earlySubject);
@@ -27,6 +29,7 @@ export function ContactForm({ t, earlySubject }: { t: Dict['contact']['form']; e
 					subject: data.get('subject'),
 					message: data.get('message'),
 					website: data.get('website'),
+					elapsed: Date.now() - openedAt.current,
 				}),
 			});
 			if (res.ok) {

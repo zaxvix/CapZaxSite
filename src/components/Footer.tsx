@@ -34,6 +34,7 @@ export function Footer({ t, nav }: { t: Dict['footer']; nav: Dict['nav'] }) {
 						<ul>
 							<li><Link href={`${b}/terms`}>{t.terms}</Link></li>
 							<li><Link href={`${b}/privacy`}>{t.privacy}</Link></li>
+							<li><Link href={`${b}/delete-account`}>{t.deleteAccount}</Link></li>
 							<li><a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a></li>
 						</ul>
 					</div>

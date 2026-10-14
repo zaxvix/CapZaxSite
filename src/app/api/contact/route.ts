@@ -31,6 +31,8 @@ export async function POST(request: NextRequest) {
 
 		const body = await request.json();
 		if (clean(body.website, 200)) return NextResponse.json({ ok: true }); // honeypot
+		// Bots fill the form instantly. The website sends how long the form was open; the app sends nothing.
+		if (typeof body.elapsed === 'number' && body.elapsed < 2500) return NextResponse.json({ ok: true });
 
 		const email = oneLine(clean(body.email, 200));
 		const subject = oneLine(clean(body.subject, 150));

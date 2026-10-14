@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 	title: { default: t.meta.title, template: `%s · ${t.meta.siteName}` },
 	description: t.meta.description,
 	applicationName: t.meta.siteName,
+	icons: { icon: [{ url: '/favicon-32.png', sizes: '32x32', type: 'image/png' }, { url: '/icon-192.png', sizes: '192x192', type: 'image/png' }], apple: '/apple-icon.png' },
 	openGraph: { type: 'website', siteName: t.meta.siteName, title: t.meta.title, description: t.meta.description, locale: 'en_US', images: ['/og.png'] },
 	twitter: { card: 'summary_large_image', title: t.meta.title, description: t.meta.description, images: ['/og.png'] },
 };

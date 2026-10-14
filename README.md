@@ -2,7 +2,7 @@
 
 Marketing site for the Capzax app (capzax.com), a Zaxvix product. Next.js 16 (App Router, standalone output), English only, no analytics or cookies.
 
-Pages: Home, Help (FAQ), About, Contact (form → email), Terms, Privacy. Text lives in `src/content/en.ts`.
+Pages: Home, Help (FAQ), About, Contact (form → email), Terms, Privacy, Delete account (linked from the Play Store listing). Text lives in `src/content/en.ts`.
 
 ## Develop
 ```bash
@@ -34,3 +34,9 @@ Later, to move to its own server: build with `npm run build`, run `.next/standal
 ## Notes
 - Terms and Privacy are first drafts and should be reviewed by a lawyer before launch.
 - Fonts are bundled via `@fontsource` (no Google Fonts requests).
+
+## Checks before/after a release
+- `npm run typecheck && npm run build`
+- `npm audit` (should report 0).
+- The contact endpoint (`/api/contact`) is also used by the Capzax app's Contact screen, so keep its JSON shape (`email`, `subject`, `message`).
+- If `www.capzax.com` should work too, add it as a domain alias in cPanel and make sure AutoSSL covers it (or redirect `www` to the bare domain).

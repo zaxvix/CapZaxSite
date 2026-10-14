@@ -14,6 +14,7 @@ export const en = {
 		legal: 'Legal',
 		terms: 'Terms of Service',
 		privacy: 'Privacy Policy',
+		deleteAccount: 'Delete account',
 		madeBy: 'A product by',
 		rights: 'All rights reserved.',
 	},
@@ -209,6 +210,18 @@ export const en = {
 				{ h: '10. Changes', p: ['We may update this policy. When we make important changes we will tell you in the app or on this website.'] },
 			],
 		},
+	},
+	deleteAccount: {
+		title: 'Delete your account',
+		sub: 'You can delete your Capzax account at any time. This page explains how and what happens.',
+		sections: [
+			{ h: 'In the app (fastest)', p: ['Open Capzax, go to Profile and tap “Delete account”. Confirm, and your account is deleted from our server right away.'] },
+			{ h: 'By email', p: ['If you can no longer open the app, write to us from the recovery email address linked to your account and ask us to delete your account. We will confirm by email and delete it within 30 days.', 'If you never added a recovery email, your account is anonymous and we cannot tell which one is yours. Delete it in the app if you can; otherwise uninstalling the app and not using it again is all that is needed.'] },
+			{ h: 'What is deleted', p: ['Your account record on our server: the random account ID, your plan and usage, your recovery email if you added one, and the device tokens.', 'We never receive your videos, captions or projects. They are only on your phone, so they are not affected. Uninstalling the app removes them from the phone.'] },
+			{ h: 'What is not deleted', p: ['If you have a paid subscription, cancel it in the app store separately. Deleting your account does not cancel it. Messages you sent through the contact form are kept as long as needed to answer you, and you can ask us to delete those too.'] },
+		],
+		mailButton: 'Email us to delete my account',
+		mailSubject: 'Delete my Capzax account',
 	},
 	notFound: { title: 'Page not found', text: 'The page you are looking for does not exist.', home: 'Back to home' },
 };
